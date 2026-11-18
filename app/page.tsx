@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CourseCard } from "@/components/course-card";
 import { Button } from "@/components/ui/button";
 export default function Home() {
@@ -26,7 +27,10 @@ export default function Home() {
           compact
         />
       </section>
-      <div className="mt-8">
+      <div className="mt-8 flex flex-wrap gap-3">
+        <Button asChild>
+          <Link href="/today">Приёмы на сегодня</Link>
+        </Button>
         <Button asChild>
           <a href="/api/health">Проверить серверный маршрут</a>
         </Button>
